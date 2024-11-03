@@ -1,0 +1,50 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Advice index{% endblock %}
+
+{% block body %}
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+                <th scope="col" class="px-6 py-3">Id</th>
+                <th scope="col" class="px-6 py-3">Mood Level</th>
+                <th scope="col" class="px-6 py-3">Email Template</th>
+                <th scope="col" class="px-6 py-3">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for advice in advice %}
+                <tr class="bg-white border-b">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                        #{{ advice.id }}
+                    </th>
+                    <td class="px-6 py-4">{{ advice.moodLevel }}</td>
+                    <td class="px-6 py-4">{{ advice.emailTemplate }}</td>
+                    <td class="flex items-center px-6 py-4">
+                        <a href="{{ path('app_advice_show', {'id': advice.id}) }}" class="flex justify-center rounded-md bg-blue-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 ml-3">Show</a>
+                        <a href="{{ path('app_advice_edit', {'id': advice.id}) }}" class="flex justify-center rounded-md bg-yellow-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500 ml-3">Edit</a>
+                        <div class="font-medium ml-3">
+                            {{ include('advice/_delete_form.html.twig') }}
+                        </div>
+                    </td>
+                </tr>
+            {% else %}
+                <tr class="bg-white border-b hover:bg-gray-50">
+                    <td colspan="5" class="px-6 py-4 text-center">No records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <a href="{{ canAddAdvice ? path('app_advice_new') : '' }}"
+       class="inline-block mt-4 px-4 py-2 text-sm font-medium text-white rounded bg-blue-600 {{ canAddAdvice ? 'hover:bg-blue-700 focus:ring-4 focus:ring-blue-300' : 'opacity-50 cursor-not-allowed' }}"
+            {% if not canAddAdvice %} title="You can only add 5 advices. Please edit or delete existing ones." {% endif %}
+            {{ canAddAdvice ? '' : 'disabled' }}>
+        Create new
+    </a>
+    {% if not canAddAdvice %}
+        <p class="text-red-600">You can only add 5 advices. Please edit or delete existing ones.</p>
+    {% endif %}
+{% endblock %}

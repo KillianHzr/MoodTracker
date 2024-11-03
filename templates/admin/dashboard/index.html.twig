@@ -1,0 +1,41 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Admin Insights{% endblock %}
+
+{% block body %}
+    <h1 class="text-2xl font-bold" id="admin-insights-page">Admin Insights</h1>
+    <p class="mb-4">Mood data from all users.</p>
+    <div class="flex justify-between mb-6">
+        <div class="flex space-x-2 h-fit">
+            <button class="period-button px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" data-period="week">Semaine</button>
+            <button class="period-button px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" data-period="month">Mois</button>
+            <button class="period-button px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" data-period="quarter">Trimestre</button>
+            <button class="period-button px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" data-period="semester">Semestre</button>
+            <button class="period-button px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" data-period="year">Année</button>
+            <button class="period-button px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" data-period="always">Toujours</button>
+        </div>
+        <div class="flex space-x-4 items-center">
+            {% for mood in 1..5 %}
+                <div class="flex flex-col items-center">
+                    <img src="{{ asset('images/emoji_' ~ mood ~ '.svg') }}" alt="Mood {{ mood }}" class="w-8 h-8">
+                    <span class="text-sm font-medium text-gray-600">{{ mood }}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-4 rounded shadow">
+            <canvas id="linearChart" class="w-full"></canvas>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+            <canvas id="histogramChart" class="w-full"></canvas>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+            <canvas id="radarChart" class="w-full"></canvas>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+            <canvas id="pieChart" class="w-full"></canvas>
+        </div>
+    </div>
+{% endblock %}

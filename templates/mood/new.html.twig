@@ -1,0 +1,31 @@
+<h1>Comment vous sentez-vous aujourd'hui ?</h1>
+
+{{ form_start(form) }}
+
+<div>
+    <label for="{{ form.mood.vars.id }}" class="text-gray-800 text-sm mb-2 block">Votre humeur</label>
+    {{ form_widget(form.mood, {
+        'attr': {
+            'class': 'w-full text-sm text-gray-800 border border-gray-300 px-4 py-3 rounded-lg outline-blue-600',
+            'placeholder': 'Choisissez votre humeur'
+        }
+    }) }}
+</div>
+
+<div class="mt-4">
+    <label for="{{ form.note.vars.id }}" class="text-gray-800 text-sm mb-2 block">Notes</label>
+    {{ form_widget(form.note, {
+        'attr': {
+            'class': 'w-full text-sm text-gray-800 border border-gray-300 px-4 py-3 rounded-lg outline-blue-600',
+            'placeholder': 'Ajoutez une note sur votre journée'
+        }
+    }) }}
+</div>
+
+<div class="!mt-8">
+    <button type="submit" class="w-full shadow-xl py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none">
+        Enregistrer
+    </button>
+</div>
+
+{{ form_end(form) }}

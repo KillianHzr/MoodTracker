@@ -1,0 +1,50 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+        <div class="sm:mx-auto sm:w-full sm:max-w-md">
+            <h1 class="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">User Details</h1>
+
+            <div class="mt-6 bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+                <table class="w-full text-sm text-left text-gray-500">
+                    <tbody>
+                    <tr>
+                        <th class="px-6 py-4 font-medium text-gray-900">Id</th>
+                        <td class="px-6 py-4">{{ user.id }}</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <th class="px-6 py-4 font-medium text-gray-900">Email</th>
+                        <td class="px-6 py-4">{{ user.email }}</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <th class="px-6 py-4 font-medium text-gray-900">Email</th>
+                        <td class="px-6 py-4">{{ user.username }}</td>
+                    </tr>
+                    <tr>
+                        <th class="px-6 py-4 font-medium text-gray-900">Roles</th>
+                        <td class="px-6 py-4">
+                            {% for role in user.roles %}
+                                {% if role == 'ROLE_ADMIN' %}
+                                    <span class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">Admin</span>
+                                {% elseif role == 'ROLE_USER' %}
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">User</span>
+                                {% endif %}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="mt-6 flex justify-between">
+                    <a href="{{ path('app_user_index') }}" class="font-semibold leading-6 text-blue-500 hover:text-blue-400">Back to list</a>
+                    <div class="flex gap-3">
+                        <a href="{{ path('app_user_edit', {'id': user.id}) }}" class="inline-flex justify-center rounded-md bg-yellow-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500">Edit</a>
+                        {{ include('user/_delete_form.html.twig') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

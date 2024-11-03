@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <div>
+        <div class="flex flex-col items-center justify-center py-6 px-4">
+            <div class="grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full">
+                <div class="border border-gray-300 rounded-lg p-6 max-w-md shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] max-md:mx-auto">
+                    <form method="post" class="space-y-4">
+                        <div class="mb-8">
+                            <h3 class="text-gray-800 text-3xl font-bold">Register</h3>
+                            <p class="text-gray-500 text-sm mt-4 leading-relaxed">Create your account and start your journey toward a healthier mind. Track, reflect, and take charge of your emotional well-being today.</p>
+                        </div>
+
+                        {{ form_start(registrationForm) }}
+
+                        <div>
+                            <label for="email" class="text-gray-800 text-sm mb-2 block">Email</label>
+                            {{ form_widget(registrationForm.email, {'attr': {'class': 'w-full text-sm text-gray-800 border border-gray-300 px-4 py-3 rounded-lg outline-blue-600'}}) }}
+                        </div>
+
+                        <div>
+                            <label for="username" class="text-gray-800 text-sm mb-2 block">Username</label>
+                            {{ form_widget(registrationForm.username, {'attr': {'class': 'w-full text-sm text-gray-800 border border-gray-300 px-4 py-3 rounded-lg outline-blue-600'}}) }}
+                        </div>
+
+                        <div>
+                            <label for="plainPassword" class="text-gray-800 text-sm mb-2 block">Password</label>
+                            {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'w-full text-sm text-gray-800 border border-gray-300 px-4 py-3 rounded-lg outline-blue-600'}}) }}
+                        </div>
+
+                        <div>
+                            {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'text-gray-800'}}) }}
+                            <label for="agreeTerms" class="text-gray-800 text-sm">I agree to the terms and conditions</label>
+                        </div>
+
+                        <div class="!mt-8">
+                            <button type="submit" class="w-full shadow-xl py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none">
+                                Register
+                            </button>
+                        </div>
+
+                        {{ form_end(registrationForm) }}
+                    </form>
+
+                    <p class="text-sm !mt-8 text-center text-gray-800">Already have an account <a href="{{ path('app_login')}}" class="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Login here</a></p>
+                </div>
+                <div class="lg:h-[400px] md:h-[300px] max-md:mt-8">
+                    <img src="{{ asset('images/login-image.png') }}" class="w-full h-full max-md:w-4/5 mx-auto block object-cover" alt="Dining Experience" />
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,3 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-    background-color: skyblue;
+    background-color: #fff;
+}
+
+.today-highlight {
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.6);
 }

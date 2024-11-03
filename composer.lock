@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bfa3fd6c661ba7df71cffe78211433ff",
+    "content-hash": "de74fc1d23e004559b8a57691e751acd",
     "packages": [
         {
             "name": "composer/semver",
@@ -1382,6 +1382,59 @@
             "time": "2023-10-06T06:47:41+00:00"
         },
         {
+            "name": "lorenzo/pinky",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lorenzo/pinky.git",
+                "reference": "e1b1bdb2c132b8a7ba32bca64d2443f646ddbd17"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lorenzo/pinky/zipball/e1b1bdb2c132b8a7ba32bca64d2443f646ddbd17",
+                "reference": "e1b1bdb2c132b8a7ba32bca64d2443f646ddbd17",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "ext-xsl": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.21 || ^9.5.10"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/pinky.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jose Lorenzo Rodriguez",
+                    "email": "jose.zap@gmail.com"
+                }
+            ],
+            "description": "A Foundation for Emails (Inky) template transpiler",
+            "keywords": [
+                "email",
+                "foundation",
+                "inky",
+                "template",
+                "zurb"
+            ],
+            "support": {
+                "issues": "https://github.com/lorenzo/pinky/issues",
+                "source": "https://github.com/lorenzo/pinky/tree/1.1.0"
+            },
+            "time": "2023-07-31T13:36:50+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "3.7.0",
             "source": {
@@ -2159,6 +2212,75 @@
             "time": "2024-09-19T08:57:32+00:00"
         },
         {
+            "name": "symfony/brevo-mailer",
+            "version": "v7.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/brevo-mailer.git",
+                "reference": "be525f2efca63ec1f2c99b6fdcc7092aa154a5e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/brevo-mailer/zipball/be525f2efca63ec1f2c99b6fdcc7092aa154a5e6",
+                "reference": "be525f2efca63ec1f2c99b6fdcc7092aa154a5e6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "symfony/mailer": "^5.4.21|^6.2.7|^7.0"
+            },
+            "conflict": {
+                "symfony/mime": "<6.2"
+            },
+            "require-dev": {
+                "symfony/http-client": "^6.3|^7.0",
+                "symfony/webhook": "^6.3|^7.0"
+            },
+            "type": "symfony-mailer-bridge",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Mailer\\Bridge\\Brevo\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Tanguy",
+                    "homepage": "https://github.com/petanguy"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Brevo Mailer Bridge",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/brevo-mailer/tree/v7.1.4"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-08-20T11:38:55+00:00"
+        },
+        {
             "name": "symfony/cache",
             "version": "v7.1.5",
             "source": {
@@ -2572,6 +2694,71 @@
                 }
             ],
             "time": "2024-09-20T08:28:38+00:00"
+        },
+        {
+            "name": "symfony/css-selector",
+            "version": "v7.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/css-selector.git",
+                "reference": "1c7cee86c6f812896af54434f8ce29c8d94f9ff4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/1c7cee86c6f812896af54434f8ce29c8d94f9ff4",
+                "reference": "1c7cee86c6f812896af54434f8ce29c8d94f9ff4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\CssSelector\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Jean-François Simon",
+                    "email": "jeanfrancois.simon@sensiolabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Converts CSS selectors to XPath expressions",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/css-selector/tree/v7.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-05-31T14:57:53+00:00"
         },
         {
             "name": "symfony/dependency-injection",
@@ -4571,16 +4758,16 @@
         },
         {
             "name": "symfony/notifier",
-            "version": "v7.1.5",
+            "version": "v7.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/notifier.git",
-                "reference": "843946b0b1018ddc714b467f223607c71f9f6c8f"
+                "reference": "e45a3db2dd184060fa9c0d5c0b94dfa82bc0a13f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/notifier/zipball/843946b0b1018ddc714b467f223607c71f9f6c8f",
-                "reference": "843946b0b1018ddc714b467f223607c71f9f6c8f",
+                "url": "https://api.github.com/repos/symfony/notifier/zipball/e45a3db2dd184060fa9c0d5c0b94dfa82bc0a13f",
+                "reference": "e45a3db2dd184060fa9c0d5c0b94dfa82bc0a13f",
                 "shasum": ""
             },
             "require": {
@@ -4629,7 +4816,7 @@
                 "notifier"
             ],
             "support": {
-                "source": "https://github.com/symfony/notifier/tree/v7.1.5"
+                "source": "https://github.com/symfony/notifier/tree/v7.1.6"
             },
             "funding": [
                 {
@@ -4645,7 +4832,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-08T12:32:26+00:00"
+            "time": "2024-09-25T14:20:29+00:00"
         },
         {
             "name": "symfony/options-resolver",
@@ -7282,6 +7469,78 @@
             "time": "2024-05-31T14:57:53+00:00"
         },
         {
+            "name": "symfony/webpack-encore-bundle",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/webpack-encore-bundle.git",
+                "reference": "e335394b68a775a9b2bd173a8ba4fd2001f3870c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/webpack-encore-bundle/zipball/e335394b68a775a9b2bd173a8ba4fd2001f3870c",
+                "reference": "e335394b68a775a9b2bd173a8ba4fd2001f3870c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1.0",
+                "symfony/asset": "^5.4 || ^6.2 || ^7.0",
+                "symfony/config": "^5.4 || ^6.2 || ^7.0",
+                "symfony/dependency-injection": "^5.4 || ^6.2 || ^7.0",
+                "symfony/http-kernel": "^5.4 || ^6.2 || ^7.0",
+                "symfony/service-contracts": "^1.1.9 || ^2.1.3 || ^3.0"
+            },
+            "require-dev": {
+                "symfony/framework-bundle": "^5.4 || ^6.2 || ^7.0",
+                "symfony/http-client": "^5.4 || ^6.2 || ^7.0",
+                "symfony/phpunit-bridge": "^5.4 || ^6.2 || ^7.0",
+                "symfony/twig-bundle": "^5.4 || ^6.2 || ^7.0",
+                "symfony/web-link": "^5.4 || ^6.2 || ^7.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "thanks": {
+                    "name": "symfony/webpack-encore",
+                    "url": "https://github.com/symfony/webpack-encore"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\WebpackEncoreBundle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Integration of your Symfony app with Webpack Encore",
+            "support": {
+                "issues": "https://github.com/symfony/webpack-encore-bundle/issues",
+                "source": "https://github.com/symfony/webpack-encore-bundle/tree/v2.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-10-02T07:27:19+00:00"
+        },
+        {
             "name": "symfony/yaml",
             "version": "v7.1.5",
             "source": {
@@ -7351,6 +7610,128 @@
                 }
             ],
             "time": "2024-09-17T12:49:58+00:00"
+        },
+        {
+            "name": "tijsverkoyen/css-to-inline-styles",
+            "version": "v2.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tijsverkoyen/CssToInlineStyles.git",
+                "reference": "83ee6f38df0a63106a9e4536e3060458b74ccedb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/83ee6f38df0a63106a9e4536e3060458b74ccedb",
+                "reference": "83ee6f38df0a63106a9e4536e3060458b74ccedb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "php": "^5.5 || ^7.0 || ^8.0",
+                "symfony/css-selector": "^2.7 || ^3.0 || ^4.0 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0 || ^7.5 || ^8.5.21 || ^9.5.10"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TijsVerkoyen\\CssToInlineStyles\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Tijs Verkoyen",
+                    "email": "css_to_inline_styles@verkoyen.eu",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
+            "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
+            "support": {
+                "issues": "https://github.com/tijsverkoyen/CssToInlineStyles/issues",
+                "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.2.7"
+            },
+            "time": "2023-12-08T13:03:43+00:00"
+        },
+        {
+            "name": "twig/cssinliner-extra",
+            "version": "v3.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/cssinliner-extra.git",
+                "reference": "cef36c444b1cce4c0978d7aebd20427671a918f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/cssinliner-extra/zipball/cef36c444b1cce4c0978d7aebd20427671a918f4",
+                "reference": "cef36c444b1cce4c0978d7aebd20427671a918f4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "tijsverkoyen/css-to-inline-styles": "^2.0",
+                "twig/twig": "^3.13|^4.0"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "Resources/functions.php"
+                ],
+                "psr-4": {
+                    "Twig\\Extra\\CssInliner\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "A Twig extension to allow inlining CSS",
+            "homepage": "https://twig.symfony.com",
+            "keywords": [
+                "css",
+                "inlining",
+                "twig"
+            ],
+            "support": {
+                "source": "https://github.com/twigphp/cssinliner-extra/tree/v3.13.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/twig/twig",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-03T13:08:40+00:00"
         },
         {
             "name": "twig/extra-bundle",
@@ -7425,6 +7806,76 @@
                 }
             ],
             "time": "2024-09-01T20:39:12+00:00"
+        },
+        {
+            "name": "twig/inky-extra",
+            "version": "v3.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/inky-extra.git",
+                "reference": "60c92c2a435ccd95d7a852229f01098aaf7fbced"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/inky-extra/zipball/60c92c2a435ccd95d7a852229f01098aaf7fbced",
+                "reference": "60c92c2a435ccd95d7a852229f01098aaf7fbced",
+                "shasum": ""
+            },
+            "require": {
+                "lorenzo/pinky": "^1.0.5",
+                "php": ">=8.0.2",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "twig/twig": "^3.13|^4.0"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "Resources/functions.php"
+                ],
+                "psr-4": {
+                    "Twig\\Extra\\Inky\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "A Twig extension for the inky email templating engine",
+            "homepage": "https://twig.symfony.com",
+            "keywords": [
+                "email",
+                "emails",
+                "inky",
+                "twig"
+            ],
+            "support": {
+                "source": "https://github.com/twigphp/inky-extra/tree/v3.13.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/twig/twig",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-03T13:08:40+00:00"
         },
         {
             "name": "twig/twig",
@@ -9304,71 +9755,6 @@
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/browser-kit/tree/v7.1.1"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-05-31T14:57:53+00:00"
-        },
-        {
-            "name": "symfony/css-selector",
-            "version": "v7.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/css-selector.git",
-                "reference": "1c7cee86c6f812896af54434f8ce29c8d94f9ff4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/1c7cee86c6f812896af54434f8ce29c8d94f9ff4",
-                "reference": "1c7cee86c6f812896af54434f8ce29c8d94f9ff4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\CssSelector\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Jean-François Simon",
-                    "email": "jeanfrancois.simon@sensiolabs.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Converts CSS selectors to XPath expressions",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/css-selector/tree/v7.1.1"
             },
             "funding": [
                 {

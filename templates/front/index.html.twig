@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FrontController!{% endblock %}
+
+{% block body %}
+    <div class="mx-auto max-w-2xl">
+        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <div class="relative rounded-full mt-6 px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                    Access detailed insights into your mood patterns. <a href="{{ path('app_insights') }}" class="font-semibold text-blue-600 pl-2"><span class="absolute inset-0" aria-hidden="true"></span>Insights <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            {% else %}
+                <div class="relative rounded-full mt-6 px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                    Register an account to use our Mood Tracker. <a href="{{ path('app_register') }}" class="font-semibold text-blue-600 pl-2"><span class="absolute inset-0" aria-hidden="true"></span>Register <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="text-center">
+            <h1 class="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Track Your Mood, Transform Your Mind</h1>
+            <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">Understand your emotions, discover patterns, and build a healthier mindset day by day.</p>
+
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <a href="{{ path('app_mood_calendar_default') }}" class="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Calendar</a>
+                    <a href="{{ path('app_insights') }}" class="text-sm/6 font-semibold text-gray-900">Insights <span aria-hidden="true">→</span></a>
+                {% else %}
+                    <a href="{{ path('app_register') }}" class="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Register an account</a>
+                    <a href="{{ path('app_login') }}" class="text-sm/6 font-semibold text-gray-900">Login <span aria-hidden="true">→</span></a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
