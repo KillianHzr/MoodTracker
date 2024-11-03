@@ -107,3 +107,8 @@ MAILER_DSN=brevo+smtp://
 # MAILER_DSN=brevo+smtp://USERNAME:PASSWORD@default
 ###< symfony/brevo-mailer ###
 ```
+
+## Auto-Evaluation [4/5]
+
+Le développement de cette web-app ne m'a pas posé trop de difficultés pour le réaliser. L'ensemble des fonctionnalitées intégrées coïncident avec les connaissances vus en cours et je pense avoir répondu correctement aux attentes de la consigne. Dans les fonctionnalités, j'ai intégré des Service comme les notifications par email et l’export CSV, tout en utilisant des composants Symfony tels que Notifier et Webpack Encore. WE m'a aussi été utile pour utiliser des package comme Tailwind CSS ou ChartJs. J'ai essayé d'avoir un projet propre, avec une bonne organisation et une interface agréable pour l'utilisateur. Cependant, même si le projet est fonctionnel et répond aux attentes, il n'est vraiment pas complet et j'aurais aimé faire beaucoup plus, que ça soit en terme de fonctionnalités et d'interface. Je sais aussi que le code n'est pas optimisé et qu'il y a beaucoup de duplications que je ne fais pas normalement, mais par faute de temps personnel je n'ai pas eu l'occasion de perfectionner l'application.
+
